@@ -145,6 +145,55 @@ const peopleLis = people.map((person, i) =>
 // ReactDOM.render goes here:
 ReactDOM.render(<ul>{peopleLis}</ul>, document.getElementById('app'));
 
+		
+***********
+		
+		
+		
+import { animals } from './animals';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const title = "";
+
+const background = (
+  <img
+    className='background'
+    alt='ocean'
+    src='/blackbgimage.png'
+  />
+)
+
+const animalFacts = (
+  <div>
+    <h1>{title == "" ? "Click an animal for a fun fact" : title} </h1>
+    {background}
+  </div>
+)
+
+ReactDOM.render(animalFacts, document.getElementById("root"));
+
+
+*******
+		
+		
+const imgMyimageexample = require('../assets/imageexample.jpg');
+const divStyle = {
+  width: '88%',
+  height: '800px',
+  backgroundImage: `url(${imgMyimageexample})`,
+  backgroundSize: 'cover'   <---- This is important
+};
+
+export default class Mycomponent extends React.Component {
+  render() {
+    return (
+      <div className="cComponent" style={divStyle} >
+        <h1 align="center">Some header example</h1>
+      </div>
+    );
+  }
+}
   
 
 
