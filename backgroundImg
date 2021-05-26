@@ -1,0 +1,106 @@
+// app.js
+
+div {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+body {
+
+background-image: url(/blackbgimage.png);
+width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed 50%;
+background-size: cover;
+background-color: #464646;
+}
+}
+
+#fact {
+	display: flex;
+	justify-content: center;
+  position: fixed;
+	margin-top: 100px;
+	width: 80%;
+	font-size: 5vw;
+	z-index: 2;
+}
+
+.animals {
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	width: 90%;
+	margin-top: 240px;
+	z-index: 2
+}
+
+.animal {
+	width: 33.3%;
+}
+
+@media only screen and (max-width: 670px) {
+	.animals {
+		margin-top: 180px;
+	}
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+	.animals {
+		margin-top: 150px;
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	.animals {
+		margin-top: 130px;
+	}
+}
+
+@media only screen and (max-width: 200px) {
+	.animals {
+		margin-top: 120px;
+	}
+}
+
+
+// index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://content.codecademy.com/courses/React/react-course-bundle.min.js"></script>
+	<script src="/app.compiled.js"></script>
+  </body>
+</html>
+
+
+// animals.js
+
+export const animals = {
+  dolphin: {
+    image: '/images/dolphin.jpg',
+    facts: ['Dolphins have been shown to give distinct names to each other!', 'Dolphins are known to display their own culture!', 'Dolphins have two stomachs!']
+  },
+  lobster: {
+    image: '/images/lobster.jpg',
+    facts: ['Lobsters taste with their legs!', 'Lobsters chew with their stomachs!', 'Lobsters can live as long as 100 years.']
+  },
+  starfish: {
+    image: '/images/starfish.jpg',
+    facts: ['Starfish can have up to 40 arms!', 'Starfish have no brain and no blood!', 'Starfish can regenerate their own arms!']
+  }
+};
+
+// images/blackbfimage.png
